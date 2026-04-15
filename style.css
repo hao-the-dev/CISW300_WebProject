@@ -1,54 +1,67 @@
 /*For all html files */
-body {
-   background-color: #ffffff;
-   margin: 0;
-   padding: 0;
-   color: black;   
-   overflow-x: hidden;
+/* navigation bar */
+nav {
+
 }
-.input-field {
-   width: 100%;
-   height: max(20px, 3vh);
-   background-color: #dc2020;
-   color: #f6f6f6;
-   font-size: 3vh;
-   text-align: center;
-}
-.input-field:focus {
-   outline: none;
-}
-.navbar ul {
-   width: 100%;
-   color: #ffffff;
+nav ul {
    list-style-type: none;
-   margin: 0;
-   padding: 0;
    display: flex;
-   overflow: hidden;
-   justify-content: center;
-   background-color: #312898;
+   padding: 0;
    width: 100vw;
-}
-.navbar a {
-   color: #ffffff;
+   background-color: #5b4fd8;
+   margin: 0;
+   position: fixed;
+   top: 0;
+   left: 0;
    text-decoration: none;
-   font-size: 3vh;
-   display: block;
-   padding: 10px 20px;
-   text-align: center;
-   font-size: auto;
+   height: 10vh;
+   justify-content: right;
+   align-items: center;
+   overflow: hidden;
+
 }
-.navbar a:hover {
-   background-color: #947bc2;
+nav li {
+   padding: 1000px 20px;
+   position: relative;
+   right: 20px;
 }
-.title {
-   padding-left: 20px;
+nav a {
+   text-decoration: none;
+   color: white;
+   font-size: 18px;
+
+   
+}
+nav li:hover {
+   background-color: #9891fb;
+
+}
+.logo {
+   height: 80%;
+   width: auto;
+   margin-right: auto;
+   margin-left: 40px;
+   padding-right: 20px;
+
+
+   
+}
+/* navigation bar end */
+/* Start of Body */
+body {
+   color: #333;
 }
 /*End*/
 
-
 /*For Index.html */
+.homeMsg {
+   position: fixed;
+   top: 60%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: clamp(18px, 24px, 18px);
 
+}
 /*End*/
 
 /*For About.html */
@@ -60,15 +73,7 @@ body {
 /*End*/
 
 /*For Mentorship.html */
-.mentorship-page .mform {
-   justify-content: center;
-   display: flex;
-   width: 1000px;
-   border: 2px solid black;
-   position: absolute;
-   left: 50%;
-   transform: translateX(-50%);
-}
+
 /*End*/
 
 /*For Resources.html */
