@@ -1,7 +1,7 @@
 /*For all html files */
 /* navigation bar */
-nav {
-
+nav{
+   position: absolute;
 }
 nav ul {
    list-style-type: none;
@@ -40,7 +40,7 @@ nav li:hover {
    height: 80%;
    width: auto;
    margin-right: auto;
-   margin-left: 40px;
+   margin-left: 25px;
    padding-right: 20px;
 
 
@@ -48,24 +48,26 @@ nav li:hover {
 }
 /* navigation bar end */
 /* Start of Body */
-body {
-   color: #333;
+.Body {
+   position: fixed;
+   top: 15%;
+   padding-left: 10%;
 }
 /*End*/
 
 /*For Index.html */
+/*End*/
 .homeMsg {
    position: fixed;
-   top: 60%;
+   top: 65%;
    left: 50%;
    transform: translate(-50%, -50%);
-   font-size: clamp(18px, 24px, 18px);
+   
+}
+/*For About.html */
+.aboutBody {
 
 }
-/*End*/
-
-/*For About.html */
-
 /*End*/
 
 /*For Pathway.html */
