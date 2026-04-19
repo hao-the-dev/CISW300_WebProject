@@ -57,17 +57,9 @@ nav li:hover {
 
 /*For Index.html */
 /*End*/
-.homeMsg {
-   position: fixed;
-   top: 65%;
-   left: 50%;
-   transform: translate(-50%, -50%);
-   
-}
-/*For About.html */
-.aboutBody {
 
-}
+/*For About.html */
+
 /*End*/
 
 /*For Pathway.html */
