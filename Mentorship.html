@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CISW300 - Web Project</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="script.js" defer></script>
 </head>
 <div id="nav-placeholder"></div>
@@ -15,7 +16,7 @@
   <p>Please complete this form to request mentorship or guidance through ViaHealth. Fill out the fields below; choose the options that best match your needs; and use the comments box for any specific details or urgent requests.</p>
   <p style="color: red;">* Must be located in California</p>
 
-  <form action="#" method="post">
+  <form id="mentorship-form" onsubmit="mentorshipFormSubmit(event)">
 
     <!-- Name -->
     <label for="name">Name:</label><br>
@@ -25,10 +26,14 @@
     <label for="email">Email:</label><br>
     <input type="email" id="email" name="email" placeholder="john.doe@gmail.com"><br><br>
 
+    <!-- X-Credit: Replace the submit button above with a graphic image if desired -->
+    <!-- Example:
+    <input type="image" src="submit-button.png" alt="Order Now">
+    -->
+<!--
     <!-- Address (required for assignment) -->
     <label for="address">Address:</label><br>
     <input type="text" id="address" name="address" placeholder="1234 Sunshine Blvd, Apt 4B"><br><br>
-
     <!-- County -->
     <label for="county">County (California only):</label><br>
     <input type="text" id="county" name="county" placeholder="Los Angeles County"><br><br>
@@ -40,7 +45,10 @@
     <!-- Zip Code -->
     <label for="zip">Zip Code:</label><br>
     <input type="text" id="zip" name="zip" maxlength="5" size="5" placeholder="90210"><br><br>
+    <input type="submit" value="Order Now">
 
+  </form>
+  <form>
     <!-- Assignment-required radio buttons -->
     <p>What type of support are you looking for?</p>
     <input type="radio" id="career" name="support_type" value="Career Guidance">
@@ -127,7 +135,6 @@
     <!-- Example:
     <input type="image" src="submit-button.png" alt="Order Now">
     -->
-
   </form>
   <div class="padding"></div>
 </body>
