@@ -18,10 +18,9 @@ nav ul {
    justify-content: right;
    align-items: center;
    overflow: hidden;
-
 }
 nav li {
-   padding: 1000px 20px;
+   padding: 1000px clamp(2vw, 3vw, 5vw);
    position: relative;
    right: 20px;
 }
@@ -48,11 +47,12 @@ nav li:hover {
 }
 /* navigation bar end */
 /* Start of Body */
-.Body {
-   position: fixed;
-   top: 15%;
+Body {
+   position: absolute;
+   top: 10%;
    padding-left: 10%;
 }
+
 /*End*/
 
 /*For Index.html */
@@ -67,6 +67,9 @@ nav li:hover {
 /*End*/
 
 /*For Mentorship.html */
+.Mentorship .padding {
+   padding-top: 100px;
+}
 
 /*End*/
 
