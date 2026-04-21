@@ -5,7 +5,7 @@ window.onload = function() {
             .then(response => response.text())
             .then(data => {
                 navPlaceholder.innerHTML = data;
-                const logo = "myImages/OIP-4278803273.jpg";
+                const logo = "myImages/logo.png";
                 document.getElementById("logo").src = logo;
             })
             .catch(err => console.error("Could not load navbar:", err));

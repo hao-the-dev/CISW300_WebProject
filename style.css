@@ -69,9 +69,10 @@ Body {
 .Home {
    margin: 0;
    font-family: Arial, sans-serif;
-   background-color: #f4f4f4;
+   background-color: #ffffff;
    text-align: center;
    width: 100vw;
+   padding-top: 150px;
 }
 .Home .hero {
             padding: 50px 20px;
@@ -95,14 +96,12 @@ Body {
    width: 60%;
    margin: auto;
 }
-
         /* Section 2 layout */
 .Home .section2 {
       display: flex;
       justify-content: space-around;
       align-items: center;
       padding: 100px 50px;
-   background: #f4f4f4;
 }
 
 .Home .left-text {
@@ -120,7 +119,7 @@ Body {
    color: white;
    font-size: 24px;
    text-decoration: none;
-   margin: 20px 0;
+   margin: 100px 0;
 }
 
 .Home .red {
