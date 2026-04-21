@@ -27,6 +27,15 @@ async function mentorshipFormSubmit(event) {
     const countyValue = document.getElementById('county').value;
     const cityValue = document.getElementById('city').value;
     const zipValue = document.getElementById('zip').value;
+    const supportTypeValue = Array.from(document.querySelectorAll('input[name="support_type"]:checked')).map(checkbox => checkbox.value);
+    const requestTypeValue = document.querySelector('input[name="request_type"]:checked')?.value || "None Selected";
+    const helpAreasValue = Array.from(document.querySelectorAll('input[name="areas"]:checked')).map(checkbox => checkbox.value);
+    const interestedProgramValue = document.getElementById('program').value;
+    const educationLevelValue = document.getElementById('level').value;
+    const urgencyValue = document.querySelector('input[name="urgency"]:checked')?.value || "None Selected";
+    const deadlineValue = document.getElementById('deadline').value;
+    const referralValue = document.getElementById('referral').value;
+    const commentValue = document.getElementById('comments').value;
 
     // Send the data to your "form_submissions" table
     const { data, error } = await supabaseClient
@@ -37,14 +46,24 @@ async function mentorshipFormSubmit(event) {
             Address: addressValue,
             County: countyValue,
             City: cityValue,
-            Zipcode: zipValue
+            Zipcode: zipValue,
+            Support_Type: supportTypeValue,
+            Request_Type: requestTypeValue,
+            Help_Areas: helpAreasValue,
+            Interested_Program: interestedProgramValue,
+            Education_Level: educationLevelValue,
+            Urgency: urgencyValue,
+            Deadline: deadlineValue,
+            Referral: referralValue,
+            Comment: commentValue
+
+
         }]);
 
     if (error) {
         console.error("Error sending to cloud:", error.message);
         alert("Upload failed.");
     } else {
-        alert("Successfully saved to Supabase!");
-        event.target.reset(); // Clears the form fields
+        event.target.reset(); 
     }
 }

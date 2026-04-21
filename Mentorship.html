@@ -20,11 +20,11 @@
 
     <!-- Name -->
     <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" placeholder="John Doe"><br><br>
+    <input type="text" id="name" name="name" placeholder="John Doe" required><br><br>
 
     <!-- Email -->
     <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" placeholder="john.doe@gmail.com"><br><br>
+    <input type="email" id="email" name="email" placeholder="john.doe@gmail.com" required><br><br>
 
     <!-- X-Credit: Replace the submit button above with a graphic image if desired -->
     <!-- Example:
@@ -33,33 +33,33 @@
 <!--
     <!-- Address (required for assignment) -->
     <label for="address">Address:</label><br>
-    <input type="text" id="address" name="address" placeholder="1234 Sunshine Blvd, Apt 4B"><br><br>
+    <input type="text" id="address" name="address" placeholder="1234 Sunshine Blvd, Apt 4B" required><br><br>
     <!-- County -->
     <label for="county">County (California only):</label><br>
-    <input type="text" id="county" name="county" placeholder="Los Angeles County"><br><br>
+    <input type="text" id="county" name="county" placeholder="Los Angeles County" required><br><br>
 
     <!-- City -->
     <label for="city">City:</label><br>
-    <input type="text" id="city" name="city" placeholder="San Francisco"><br><br>
+    <input type="text" id="city" name="city" placeholder="San Francisco" required><br><br>
 
     <!-- Zip Code -->
     <label for="zip">Zip Code:</label><br>
-    <input type="text" id="zip" name="zip" maxlength="5" size="5" placeholder="90210"><br><br>
-    <input type="submit" value="Order Now">
+    <input type="text" id="zip" name="zip" maxlength="5" size="5" placeholder="90210" required><br><br>
 
-  </form>
-  <form>
-    <!-- Assignment-required radio buttons -->
-    <p>What type of support are you looking for?</p>
-    <input type="radio" id="career" name="support_type" value="Career Guidance">
-    <label for="career">Career Guidance</label><br>
+    <!-- Support Types -->
+    <p>What type of support are you seeking? (Select all that apply)</p>
+    <input type="checkbox" id="Career_Guidance" name="support_type" value="Career Guidance">
+    <label for="Career_Guidance">Career Guidance</label><br>
 
-    <input type="radio" id="clinical" name="support_type" value="Clinical Training">
-    <label for="clinical">Clinical Training</label><br>
+    <input type="checkbox" id="Clinical_Training" name="support_type" value="Clinical Training">
+    <label for="Clinical_Training">Clinical Training</label><br>
 
-    <input type="radio" id="academic" name="support_type" value="Academic Support">
-    <label for="academic">Academic Support</label><br><br>
+    <input type="checkbox" id="Academic_Support" name="support_type" value="Academic Support">
+    <label for="Academic_Support">Academic Support</label><br>
 
+        <input type="checkbox" id="Not_Sure" name="support_type" value="Not Sure">
+    <label for="Not_Sure">Not Sure</label><br><br>
+    
     <!-- Request Type -->
     <p>What best describes your request?</p>
     <input type="radio" id="apply" name="request_type" value="Apply to a Program">
@@ -69,7 +69,7 @@
     <label for="inquiry">General Inquiry</label><br>
 
     <input type="radio" id="otherrequest" name="request_type" value="Other">
-    <label for="otherrequest">Other</label><br><br>
+    <label for="otherrequest">Other</label><br>
 
     <!-- Assignment-required checkboxes -->
     <p>Select areas you need help with:</p>
