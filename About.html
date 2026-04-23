@@ -1,13 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CISW300 - Web Project</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Via Health</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<div id="nav-placeholder"></div>
 <body class="About">
+  <nav class="navbar">
+    <div class="logo-wrap">
+      <img src="myImages/viahealth-logo.png" alt="Via Health logo" class="site-logo" />
+      <span class="logo-text">Via Health</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="Index.html">home</a>
+      <a href="About.html">about</a>
+      <a href="explore.html">explore</a>
+      <a href="Resources.html">resources</a>
+      <a href="Mentorship.html">mentorship</a>
+      <a href="Event.html">events</a>
+    </div>
+  </nav>
+
+  <main class="about-page">
+    <section class="about-hero">
+      <p class="eyebrow">About</p>
+      <h1>Clarity shouldn’t depend on who you know.</h1>
+      <p class="subtext">
+        Via Health helps students navigate healthcare pathways by providing
+        decision-focused mentorship and connecting them with people who have
+        relevant, recent experience when it matters most.
+      </p>
+    </section>
+
+    <section class="mission-two-col">
+      <div class="mission-block">
+        <h2>What is Via Health?</h2>
+        <p>
+          Via Health helps students navigate healthcare pathways by providing
+          decision-focused mentorship—connecting them to people with relevant,
+          recent experience when it matters most.
+        </p>
+      </div>
+
+      <div class="mission-block">
+        <h2>Who is this for?</h2>
+        <p>
+          We’re currently focused on high school and college-aged California
+          students as the initial mentorship network is being developed. In the
+          future, the platform may expand to support students in other regions
+          as the network grows.
+        </p>
+      </div>
+    </section>
+
+    <!-- REGION SECTION -->
+    <section class="about-section region-section">
+      <div class="region-copy">
+        <p class="eyebrow">Where we’re starting</p>
+        <h2>Built with California students in mind.</h2>
+        <p class="preview-intro">
+          Via Health is especially interested in supporting students in California,
+          including those navigating healthcare pathways without easy access to
+          built-in mentorship.
+        </p>
+        <p class="region-note">
+          California Northstate University (CNU) is located in Elk Grove, near the
+          Sacramento region.
+        </p>
+      </div>
+
+      <div class="region-graphic">
+        <div class="california-card">
+          <div class="map-label north">Northern California</div>
+          <div class="map-label bay">Bay Area</div>
+          <div class="map-label valley active">Central Valley</div>
+          <div class="map-label south">Southern California</div>
+
+          <button class="map-pin cnu-pin">
+            CNU
+            <span class="pin-tooltip">California Northstate University · Elk Grove</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <h2>Meet the founding team</h2>
+      <p class="team-line">Bahaar · Sarah · Jasraj · Samantha</p>
+    </section>
+
+    <!-- UPDATED MENTOR PREVIEW -->
+    <section class="about-section">
+      <h2>Mentor preview</h2>
+      <p class="preview-intro">
+        Students don’t just get generic advice—they get access to people who have
+        actually made these decisions before.
+      </p>
+
+      <div class="mentor-preview-grid">
+
+        <!-- SARAH -->
+        <div class="mentor-preview-card">
+          <div class="mentor-top">
+            <div class="mentor-avatar">SY</div>
+            <div>
+              <h3>Sarah</h3>
+              <p class="mentor-path">EMT → med school</p>
+            </div>
+          </div>
+          <p class="mentor-bio">
+            Helpful for students considering EMT training, gap years, and
+            unconventional pathways into medicine.
+          </p>
+          <div class="mentor-tags">
+            <span>EMT</span>
+            <span>gap year</span>
+            <span>unconventional</span>
+          </div>
+        </div>
+
+        <!-- BAHAAR -->
+        <div class="mentor-preview-card">
+          <div class="mentor-top">
+            <div class="mentor-avatar">B</div>
+            <div>
+              <h3>Bahaar</h3>
+              <p class="mentor-path">First-gen CA pathway</p>
+            </div>
+          </div>
+          <p class="mentor-bio">
+            Strong for students navigating first-gen pathways and building a
+            healthcare career entirely within California.
+          </p>
+          <div class="mentor-tags">
+            <span>first-gen</span>
+            <span>California</span>
+            <span>med school</span>
+          </div>
+        </div>
+
+        <!-- JASRAJ -->
+        <div class="mentor-preview-card">
+          <div class="mentor-top">
+            <div class="mentor-avatar">J</div>
+            <div>
+              <h3>Jasraj</h3>
+              <p class="mentor-path">India → CA residency</p>
+            </div>
+          </div>
+          <p class="mentor-bio">
+            Relevant for students exploring international medical pathways and
+            transitioning into U.S. residency programs.
+          </p>
+          <div class="mentor-tags">
+            <span>international</span>
+            <span>India</span>
+            <span>residency</span>
+          </div>
+        </div>
+
+        <!-- SAMANTHA -->
+        <div class="mentor-preview-card">
+          <div class="mentor-top">
+            <div class="mentor-avatar">SA</div>
+            <div>
+              <h3>Samantha</h3>
+              <p class="mentor-path">HS → premed</p>
+            </div>
+          </div>
+          <p class="mentor-bio">
+            Best for students starting early—especially in high school—and
+            figuring out how to build healthcare interest from scratch.
+          </p>
+          <div class="mentor-tags">
+            <span>high school</span>
+            <span>premed</span>
+            <span>early exposure</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
 </body>
 </html>

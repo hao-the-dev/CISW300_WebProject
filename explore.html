@@ -1,0 +1,209 @@
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+<section class="explore-journey-section">
+  <div class="journey-header">
+    <p class="eyebrow">Explore pathways</p>
+    <h2>Choose your own path.</h2>
+    <p class="journey-subtext">
+      Start with what pulls you in. You do not need to know your entire future
+      right now—just what you want to explore next.
+    </p>
+  </div>
+
+  <div class="journey-map-shell">
+    <div class="journey-map-card">
+      <div class="journey-route">
+        <div class="route-stop">EMT</div>
+        <div class="route-line route-line-1"></div>
+
+        <div class="route-stop">PA</div>
+        <div class="route-line route-line-2"></div>
+
+        <div class="route-stop long-stop">Paramedic</div>
+        <div class="route-line route-line-3"></div>
+
+        <div class="route-stop long-stop">Firefighter</div>
+      </div>
+
+      <p class="route-note">apply now or gain experience</p>
+    </div>
+
+    <div class="journey-side-card">
+      <p>
+        The first step can feel high-stakes. Explore paths first, then decide
+        what kind of guidance you actually need.
+      </p>
+      <a href="#pathways-grid" class="btn-primary">Explore paths</a>
+    </div>
+  </div>
+
+  <div id="pathways-grid" class="journey-cards-grid">
+    <article class="journey-path-card">
+      <span class="path-tag">Hands-on</span>
+      <h3>Patient Care</h3>
+      <p>Direct care, fast clinical exposure, and patient-facing roles.</p>
+    </article>
+
+    <article class="journey-path-card">
+      <span class="path-tag">Discovery</span>
+      <h3>Research</h3>
+      <p>Labs, experimentation, problem-solving, and academic pathways.</p>
+    </article>
+
+    <article class="journey-path-card">
+      <span class="path-tag">Innovation</span>
+      <h3>Tech</h3>
+      <p>Health technology, devices, systems, and digital problem-solving.</p>
+    </article>
+
+    <article class="journey-path-card">
+      <span class="path-tag">Impact</span>
+      <h3>Community Health</h3>
+      <p>Public health, equity, outreach, and community-based work.</p>
+    </article>
+  </div>
+
+  <div class="journey-roadmap-block">
+    <p class="eyebrow">Roadmap preview</p>
+    <h2>See where a path could take you.</h2>
+    <p class="journey-subtext">
+      Pathways are not one straight line. Explore possibilities, compare options,
+      and figure out what actually fits before committing to the next step.
+    </p>
+
+    <div class="roadmap-preview-grid">
+      <div class="roadmap-mini-card">
+        <div class="mini-stop">EMT</div>
+        <div class="mini-stop">PA</div>
+        <div class="mini-stop wide-stop">Paramedic</div>
+        <div class="mini-stop wide-stop">Firefighter</div>
+        <p class="mini-caption">apply now or gain experience</p>
+      </div>
+
+      <div class="roadmap-copy-card">
+        <p>
+          The first step can feel high-stakes. Explore paths first, then decide
+          what kind of guidance you actually need.
+        </p>
+        <a href="#decision-lab" class="btn-primary">Build your path</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="decision-start-grid">
+    <article class="decision-start-card">
+      <h3>I want hands-on experience fast</h3>
+      <p>
+        Explore roles that get you into patient-facing environments early and
+        help you test whether direct care feels right.
+      </p>
+    </article>
+
+    <article class="decision-start-card">
+      <h3>I want to strengthen my long-term applications</h3>
+      <p>
+        Compare experiences that build credibility, context, and a stronger
+        sense of fit before you apply.
+      </p>
+    </article>
+  </div>
+</section>
+<section id="decision-lab" class="decision-lab-section">
+  <p class="eyebrow">Decision Lab</p>
+  <h2>Build a path that actually fits you.</h2>
+  <p class="section-subtext">
+    Answer a few questions, adjust your priorities, and see which directions make the most sense right now.
+  </p>
+
+  <div class="decision-lab-grid">
+    <div class="decision-input-card">
+      <h3>1. What matters most?</h3>
+
+      <p>I want...</p>
+      <div class="choice-row">
+        <button class="choice-pill active">a fast start</button>
+        <button class="choice-pill">balance</button>
+        <button class="choice-pill">long-term upside</button>
+      </div>
+
+      <p>I care most about...</p>
+      <div class="choice-row">
+        <button class="choice-pill active">patient care</button>
+        <button class="choice-pill">research</button>
+        <button class="choice-pill">stability</button>
+      </div>
+
+      <p>My tolerance for debt/training is...</p>
+      <div class="choice-row">
+        <button class="choice-pill active">low</button>
+        <button class="choice-pill">medium</button>
+        <button class="choice-pill">high</button>
+      </div>
+    </div>
+
+    <div class="decision-slider-card">
+      <h3>2. Adjust your tradeoffs</h3>
+
+      <label>Shorter training</label>
+      <input type="range" min="0" max="100" value="70" />
+
+      <label>Lower debt</label>
+      <input type="range" min="0" max="100" value="65" />
+
+      <label>Direct patient contact</label>
+      <input type="range" min="0" max="100" value="80" />
+    </div>
+  </div>
+
+  <div class="decision-results-section">
+    <div class="results-header">
+      <div>
+        <p class="eyebrow">Recommendation</p>
+        <h3>PA looks strongest right now.</h3>
+      </div>
+      <div class="match-badge">68% match</div>
+    </div>
+
+    <div class="results-grid">
+      <div class="result-card">
+        <div class="result-top"><span>MD</span><strong>51%</strong></div>
+        <p>Strong long-term upside, but longer training and higher debt.</p>
+      </div>
+
+      <div class="result-card selected">
+        <div class="result-top"><span>PA</span><strong>68%</strong></div>
+        <p>Strong fit for direct care, shorter training, and lower debt than MD.</p>
+      </div>
+
+      <div class="result-card">
+        <div class="result-top"><span>RN</span><strong>61%</strong></div>
+        <p>Practical, stable, and patient-facing with multiple training routes.</p>
+      </div>
+
+      <div class="result-card">
+        <div class="result-top"><span>EMT</span><strong>58%</strong></div>
+        <p>Fast exposure and great for testing fit, but not always a long-term endpoint.</p>
+      </div>
+    </div>
+
+    <div class="results-bottom-grid">
+      <div class="result-info-card">
+        <p class="eyebrow">People like you chose...</p>
+        <h4>Most students with your profile explored PA first.</h4>
+        <p>
+          Students prioritizing patient care, lower debt, and shorter training often compare PA, RN, and EMT before committing.
+        </p>
+      </div>
+
+      <div class="result-info-card">
+        <p class="eyebrow">What to do this week</p>
+        <h4>1-week action generator</h4>
+        <ul>
+          <li>Compare PA and RN training timelines in California.</li>
+          <li>Talk to one person in a patient-facing role.</li>
+          <li>Write down what kind of day-to-day work actually appeals to you.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

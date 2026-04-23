@@ -1,13 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CISW300 - Web Project</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources | Via Health</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
-<div id="nav-placeholder"></div>
-<body class="Resources">
+<body>
+  <nav class="navbar">
+    <div class="logo-wrap">
+      <img src="myImages/viahealth-logo.png" alt="Via Health logo" class="site-logo" />
+      <span class="logo-text">Via Health</span>
+    </div>
+
+    <div class="nav-links">
+      <a href="Index.html">home</a>
+      <a href="About.html">about</a>
+      <a href="Program.html">programs</a>
+      <a href="Resources.html">resources</a>
+      <a href="Mentorship.html">mentorship</a>
+      <a href="Event.html">events</a>
+    </div>
+  </nav>
+
+  <main class="resources-page">
+    <section class="resources-hero">
+      <p class="eyebrow">Recommended resources</p>
+      <h1>Start with what you need right now.</h1>
+      <p class="subtext">
+        Instead of making you sort through everything, Via Health surfaces
+        resources based on the kinds of decisions students are actually trying to make.
+      </p>
+    </section>
+
+    <section class="resource-list-section">
+      <div class="resource-controls">
+        <div class="search-container">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Where do you want to go?"
+          />
+        </div>
+
+        <div class="filter-pills">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="hands-on">Hands-on</button>
+          <button class="filter-btn" data-filter="research">Research</button>
+          <button class="filter-btn" data-filter="tech">Tech</button>
+          <button class="filter-btn" data-filter="community">Community</button>
+        </div>
+      </div>
+
+      <div class="resource-section-header">
+        <div>
+          <p class="eyebrow">Suggested resources</p>
+          <h2>Recommended for students exploring early decisions</h2>
+        </div>
+        <p class="resource-side-note">
+          Based on common questions about exposure, applications, and choosing a path.
+        </p>
+      </div>
+
+      <div class="pathway-list">
+        <div class="pathway-card searchable-item" data-category="hands-on">
+          <h3>EMT Training Pathways</h3>
+          <p>Fast clinical exposure and real patient interaction early on.</p>
+        </div>
+
+        <div class="pathway-card searchable-item" data-category="hands-on">
+          <h3>Clinical Experience Guide</h3>
+          <p>What actually counts as meaningful patient-facing experience.</p>
+        </div>
+
+        <div class="pathway-card searchable-item" data-category="community">
+          <h3>PA vs Pre-Med Comparison</h3>
+          <p>Breakdown of timelines, roles, and decision tradeoffs.</p>
+        </div>
+
+        <div class="pathway-card searchable-item" data-category="research">
+          <h3>Research Opportunities</h3>
+          <p>How to get into labs and explore academic pathways early.</p>
+        </div>
+
+        <div class="pathway-card searchable-item" data-category="tech">
+          <h3>Health Tech Pathways</h3>
+          <p>Devices, systems, and engineering roles in healthcare.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>

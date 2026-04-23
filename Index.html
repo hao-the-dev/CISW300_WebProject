@@ -1,58 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CISW300 - Web Project</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Via Health</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<div id="nav-placeholder"></div>
-<body class="Home">
-<!-- HERO -->
-<div class="hero">
-    <img src="viahealth.png" class="mainLogo">
-
-    <h1>Via Health</h1>
-
-    <h2>Navigate healthcare decisions with clarity.</h2>
-
-    <p>
-        Get real guidance from people who’ve been there—when it actually matters.
-    </p>
-</div>
-
-<!-- SECTION 2 (your second image recreated) -->
-<div class="section2">
-
-    <div class="left-text">
-        <a href="#" class="btn red">Explore Pathways</a>
-
-        <h2>making decisions is tough...but so are you!</h2>
-
-        <h2>we're here to help you make them.</h2>
-
-        <a href="#" class="btn blue">Find a mentor!</a>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo-wrap">
+      <img src="myImages/viahealth-logo.png" alt="Via Health logo" class="site-logo" />
+      <span class="logo-text">Via Health</span>
     </div>
 
-    <div class="right-image">
-        <img src="map.png">
+    <div class="nav-links">
+      <a href="Index.html">home</a>
+      <a href="About.html">about</a>
+      <a href="explore.html">programs</a>
+      <a href="Resources.html">resources</a>
+      <a href="Mentorship.html">mentorship</a>
+      <a href="Event.html">events</a>
     </div>
+  </nav>
 
-</div>
+  <main>
+    <!-- HERO -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <img src="myImages/viahealth-logo.png" alt="Via Health logo" class="hero-logo" />
 
-<!-- SECTION 3 (your last image recreated) -->
-<div class="section3">
+        <p class="eyebrow">Decision-first mentorship</p>
 
-    <h2>Decisions we help with</h2>
+        <h1>Navigate healthcare decisions with clarity.</h1>
 
-    <p>Should I pursue this path or switch directions?</p>
-    <p>Do I apply now, or take time to strengthen my application?</p>
-    <p>What experience actually matters for this field?</p>
-    <p>How do I choose between two different healthcare paths?</p>
-    <p>Am I on track—or missing something important?</p>
+        <p class="hero-subtext">
+          Get real guidance from people who’ve been there—when it actually matters.
+        </p>
 
-</div>
+        <div class="hero-actions">
+          <a href="explore.html" class="btn-primary">Explore Pathways</a>
+          <a href="Mentorship.html" class="btn-outline">Request Guidance</a>
+        </div>
+      </div>
+    </section>
 
+    <!-- DECISIONS SECTION -->
+    <section class="decisions-section">
+      <div class="section-header">
+        <h2>Decisions we help with</h2>
+      </div>
+
+      <div class="decision-grid">
+        <div class="decision-card">
+          <h3>Should I pursue this path or switch directions?</h3>
+        </div>
+
+        <div class="decision-card">
+          <h3>Do I apply now, or take time to strengthen my application?</h3>
+        </div>
+
+        <div class="decision-card">
+          <h3>What experience actually matters for this field?</h3>
+        </div>
+
+        <div class="decision-card">
+          <h3>How do I choose between two different healthcare paths?</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-it-works-section">
+      <p class="eyebrow">How it works</p>
+      <h2>Start with a path. Refine with real insight.</h2>
+      <p class="section-subtext">
+        Via Health is built for students who do not need more random resources —
+        they need context, decision support, and people who have actually been
+        through these choices before.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature-card feature-card-accent">
+          <h3>Explore pathways</h3>
+          <p>
+            Browse common starting points like EMT, PA, pre-med, and nursing
+            without feeling like you have to commit immediately.
+          </p>
+          <a href="explore.html" class="feature-link">See pathways →</a>
+        </div>
+
+        <div class="feature-card">
+          <h3>Get recommended resources</h3>
+          <p>
+            Instead of making you search through everything yourself, the platform
+            surfaces what is most relevant to the decision you are making.
+          </p>
+          <a href="Resources.html" class="feature-link">View resources →</a>
+        </div>
+
+        <div class="feature-card">
+          <h3>Learn from real people</h3>
+          <p>
+            Read what students and mentors actually learned from the paths they
+            chose — including what they underestimated.
+          </p>
+          <a href="About.html" class="feature-link">Meet the network →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials-section">
+      <h2>Advice from real people</h2>
+
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p>
+            “Going to EMT school gave me the clinical experience I needed to decide
+            med school was a path I wanted to pursue because I want to build
+            relationships with patients and had tested my capacity under pressure.”
+          </p>
+          <span>— Sarah Y.</span>
+        </div>
+
+        <div class="testimonial-card">
+          <p>
+            “Getting involved in my high school’s premed club gave me early
+            exposure to the field that led me to this founding team.”
+          </p>
+          <span>— Samantha Y.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta-section">
+      <p class="eyebrow">Next step</p>
+      <h2>You do not need a perfect plan to start moving.</h2>
+      <p class="section-subtext">
+        Explore a few directions, understand the tradeoffs, and then ask better questions.
+      </p>
+
+      <a href="explore.html" class="btn-primary">Explore Pathways</a>
+    </section>
+  </main>
 </body>
 </html>
