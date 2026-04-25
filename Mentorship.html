@@ -1,141 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CISW300 - Web Project</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CISW300 - Web Project</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js" defer></script>
 </head>
-<div id="nav-placeholder"></div>
+
 <body class="Mentorship">
+  <div id="nav-placeholder"></div>
 
-  <h1>ViaHealth Service Request Form</h1>
+  <main class="form-container">
+    <!-- 
+      This form structure was adapted from Assignment 6.
 
-  <p>Please complete this form to request mentorship or guidance through ViaHealth. Fill out the fields below; choose the options that best match your needs; and use the comments box for any specific details or urgent requests.</p>
-  <p style="color: red;">* Must be located in California</p>
+      The original assignment provided a base structure with multiple input types
+      such as text fields, checkboxes, radio buttons, and select menus.
 
-  <form id="mentorship-form" onsubmit="mentorshipFormSubmit(event)">
+      I modified it for the ViaHealth mentorship/service request use case by
+      changing the labels, options, and overall purpose of the form.
 
-    <!-- Name -->
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" placeholder="John Doe" required><br><br>
-
-    <!-- Email -->
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" placeholder="john.doe@gmail.com" required><br><br>
-
-    <!-- X-Credit: Replace the submit button above with a graphic image if desired -->
-    <!-- Example:
-    <input type="image" src="submit-button.png" alt="Order Now">
+      Sarah reused the frontend structure because that was the most reliable
+      skillset available at this stage. Backend functionality is still limited,
+      so this form represents the intended frontend experience while submission
+      handling may later be routed through a simpler operations tool such as
+      Google Forms or a fuller backend system.
     -->
-<!--
-    <!-- Address (required for assignment) -->
-    <label for="address">Address:</label><br>
-    <input type="text" id="address" name="address" placeholder="1234 Sunshine Blvd, Apt 4B" required><br><br>
-    <!-- County -->
-    <label for="county">County (California only):</label><br>
-    <input type="text" id="county" name="county" placeholder="Los Angeles County" required><br><br>
 
-    <!-- City -->
-    <label for="city">City:</label><br>
-    <input type="text" id="city" name="city" placeholder="San Francisco" required><br><br>
+    <h1>ViaHealth Service Request Form</h1>
 
-    <!-- Zip Code -->
-    <label for="zip">Zip Code:</label><br>
-    <input type="text" id="zip" name="zip" maxlength="5" size="5" placeholder="90210" required><br><br>
+    <p>
+      Please complete this form to request mentorship or guidance through ViaHealth.
+      Fill out the fields below, choose the options that best match your needs,
+      and use the comments box for any specific details or urgent requests.
+    </p>
 
-    <!-- Support Types -->
-    <p>What type of support are you seeking? (Select all that apply)</p>
-    <input type="checkbox" id="Career_Guidance" name="support_type" value="Career Guidance">
-    <label for="Career_Guidance">Career Guidance</label><br>
+    <p class="location-note"><strong>* Location must be in California</strong></p>
 
-    <input type="checkbox" id="Clinical_Training" name="support_type" value="Clinical Training">
-    <label for="Clinical_Training">Clinical Training</label><br>
+    <form id="mentorship-form" onsubmit="mentorshipFormSubmit(event)">
+      <!-- 
+        Originally, this type of form relied heavily on <br> tags for spacing.
+        I cleaned that up so spacing can be controlled more consistently in CSS
+        instead of manually inserting visual gaps in the HTML.
+      -->
 
-    <input type="checkbox" id="Academic_Support" name="support_type" value="Academic Support">
-    <label for="Academic_Support">Academic Support</label><br>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="John Doe" required>
 
-        <input type="checkbox" id="Not_Sure" name="support_type" value="Not Sure">
-    <label for="Not_Sure">Not Sure</label><br><br>
-    
-    <!-- Request Type -->
-    <p>What best describes your request?</p>
-    <input type="radio" id="apply" name="request_type" value="Apply to a Program">
-    <label for="apply">Apply to a Program</label><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="john.doe@gmail.com" required>
 
-    <input type="radio" id="inquiry" name="request_type" value="General Inquiry">
-    <label for="inquiry">General Inquiry</label><br>
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" placeholder="1234 Sunshine Blvd, Apt 4B" required>
 
-    <input type="radio" id="otherrequest" name="request_type" value="Other">
-    <label for="otherrequest">Other</label><br>
+      <label for="county">County (California only):</label>
+      <input type="text" id="county" name="county" placeholder="Los Angeles County" required>
 
-    <!-- Assignment-required checkboxes -->
-    <p>Select areas you need help with:</p>
-    <input type="checkbox" id="applications" name="areas" value="Applications">
-    <label for="applications">Applications (Med School, Programs)</label><br>
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" placeholder="San Francisco" required>
 
-    <input type="checkbox" id="skills" name="areas" value="Skills">
-    <label for="skills">Technical Skills (Labs, Devices)</label><br>
+      <label for="zip">Zip Code:</label>
+      <input type="text" id="zip" name="zip" maxlength="5" placeholder="90210" required>
 
-    <input type="checkbox" id="networking" name="areas" value="Networking">
-    <label for="networking">Networking & Mentorship</label><br>
+      <fieldset>
+        <legend>What type of support are you seeking? (Select all that apply)</legend>
 
-    <input type="checkbox" id="research" name="areas" value="Research">
-    <label for="research">Research Guidance</label><br><br>
+        <label><input type="checkbox" id="career_guidance" name="support_type" value="Career Guidance"> Career Guidance</label>
+        <label><input type="checkbox" id="clinical_training" name="support_type" value="Clinical Training"> Clinical Training</label>
+        <label><input type="checkbox" id="academic_support" name="support_type" value="Academic Support"> Academic Support</label>
+        <label><input type="checkbox" id="not_sure" name="support_type" value="Not Sure"> Not Sure</label>
+      </fieldset>
 
-    <!-- Program Interest -->
-    <label for="program">Which ViaHealth program or pathway are you most interested in?</label><br>
-    <select id="program" name="program">
-      <option value="mentorship">1:1 Mentorship</option>
-      <option value="workshops">Workshops / Events</option>
-      <option value="research">Research Opportunities</option>
-      <option value="unsure">Not Sure Yet</option>
-    </select><br><br>
+      <fieldset>
+        <legend>What best describes your request?</legend>
 
-    <!-- Assignment-required select menu -->
-    <label for="level">Select your current level:</label><br>
-    <select id="level" name="level">
-      <option value="highschool">High School Student</option>
-      <option value="undergrad">Undergraduate Student</option>
-      <option value="postgrad">Postgraduate / Gap Year</option>
-    </select><br><br>
+        <label><input type="radio" id="apply" name="request_type" value="Apply to a Program"> Apply to a Program</label>
+        <label><input type="radio" id="inquiry" name="request_type" value="General Inquiry"> General Inquiry</label>
+        <label><input type="radio" id="otherrequest" name="request_type" value="Other"> Other</label>
+      </fieldset>
 
-    <!-- Urgency -->
-    <p>How urgent is your request?</p>
-    <input type="radio" id="low" name="urgency" value="Low">
-    <label for="low">Low (general guidance)</label><br>
+      <fieldset>
+        <legend>Select areas you need help with:</legend>
 
-    <input type="radio" id="medium" name="urgency" value="Medium">
-    <label for="medium">Moderate (within a few weeks)</label><br>
+        <label><input type="checkbox" id="applications" name="areas" value="Applications"> Applications (Med School, Programs)</label>
+        <label><input type="checkbox" id="skills" name="areas" value="Skills"> Technical Skills (Labs, Devices)</label>
+        <label><input type="checkbox" id="networking" name="areas" value="Networking"> Networking & Mentorship</label>
+        <label><input type="checkbox" id="research" name="areas" value="Research"> Research Guidance</label>
+      </fieldset>
 
-    <input type="radio" id="high" name="urgency" value="High">
-    <label for="high">High (time-sensitive / upcoming deadline)</label><br><br>
+      <label for="program">Which ViaHealth program or pathway are you most interested in?</label>
+      <select id="program" name="program">
+        <option value="mentorship">1:1 Mentorship</option>
+        <option value="workshops">Workshops / Events</option>
+        <option value="research">Research Opportunities</option>
+        <option value="unsure">Not Sure Yet</option>
+      </select>
 
-    <!-- Deadline -->
-    <label for="deadline">Do you have a specific deadline?</label><br>
-    <input type="text" id="deadline" name="deadline" placeholder="Example: May 15 application deadline"><br><br>
+      <label for="level">Select your current level:</label>
+      <select id="level" name="level">
+        <option value="highschool">High School Student</option>
+        <option value="undergrad">Undergraduate Student</option>
+        <option value="postgrad">Postgraduate / Gap Year</option>
+      </select>
 
-    <!-- Referral -->
-    <label for="referral">Where did you hear about ViaHealth?</label><br>
-    <input type="text" id="referral" name="referral"><br><br>
+      <fieldset>
+        <legend>How urgent is your request?</legend>
 
-    <!-- Comments -->
-    <label for="comments">Additional Comments (helpful for more specific requests):</label><br>
-    <textarea id="comments" name="comments" rows="5" cols="40"></textarea><br><br>
+        <label><input type="radio" id="low" name="urgency" value="Low"> Low (general guidance)</label>
+        <label><input type="radio" id="medium" name="urgency" value="Medium"> Moderate (within a few weeks)</label>
+        <label><input type="radio" id="high" name="urgency" value="High"> High (time-sensitive / upcoming deadline)</label>
+      </fieldset>
 
-    <!-- Applications note -->
-    <p><strong>Interested in applying?</strong> Please visit our Applications page for current updates on program availability and application cycles.</p>
+      <label for="deadline">Do you have a specific deadline?</label>
+      <input type="text" id="deadline" name="deadline" placeholder="Example: May 15 application deadline">
 
-    <!-- Submit Button -->
-    <input type="submit" value="Order Now">
+      <label for="referral">Where did you hear about ViaHealth?</label>
+      <input type="text" id="referral" name="referral">
 
-    <!-- X-Credit: Replace the submit button above with a graphic image if desired -->
-    <!-- Example:
-    <input type="image" src="submit-button.png" alt="Order Now">
-    -->
-  </form>
-  <div class="padding"></div>
+      <label for="comments">Additional Comments (helpful for more specific requests):</label>
+      <textarea id="comments" name="comments" rows="5" cols="40"></textarea>
+
+      <p class="applications-note">
+        <strong>Interested in applying?</strong> Please visit our Applications page
+        for current updates on program availability and application cycles.
+      </p>
+
+      <input type="submit" value="Submit Request">
+    </form>
+  </main>
 </body>
 </html>

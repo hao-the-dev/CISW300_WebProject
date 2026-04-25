@@ -8,19 +8,52 @@
 <body>
 
   <main style="max-width:600px; margin:80px auto; text-align:center;">
+    <!-- 
+      Sarah built this page using frontend HTML/CSS to create the intended
+      Via Health contact experience.
+
+      At this stage, there is no reliable backend infrastructure in place yet,
+      so this page functions as a frontend prototype / end-goal interface.
+
+      For early operations, the Via Health team may route submissions through
+      Google Forms so they can start collecting responses immediately without
+      needing a full backend system yet.
+    -->
+
     <h1>Partner with Via Health</h1>
 
     <p style="margin-bottom:30px; color:#666;">
       Interested in bringing a healthcare pathways talk to your school or organization?
       Fill out this form and we’ll get back to you.
     </p>
-
     <form>
+      <!-- 
+        This form is currently a visual frontend version of the end-goal contact page.
+
+        Important note:
+        the Google Form link currently available is a high school mentee interest form,
+        not a partner inquiry form, so the fields do not match this page yet.
+
+        Until a matching Google Form exists, the safest temporary solution is to send
+        users to the live Google Form directly using the button below.
+      -->
+
       <input type="text" placeholder="Your name" required><br><br>
       <input type="email" placeholder="Email" required><br><br>
       <input type="text" placeholder="Organization / School"><br><br>
       <textarea placeholder="Tell us what you're looking for" rows="4"></textarea><br><br>
-      <button type="submit">Submit</button>
+
+      <!-- 
+        Temporary operations workaround:
+        route users to the live Google Form so Via Health can collect responses now,
+        even before backend functionality is implemented.
+      -->
+      <a 
+        href="https://docs.google.com/forms/d/e/1FAIpQLScz-6lNF9UK4jM-FqhruIXRmEfNWotowv99n9a8x7SYnyy2_w/viewform?usp=dialog"
+        target="_blank"
+        style="display:inline-block; padding:12px 24px; background:#000; color:#fff; text-decoration:none; border-radius:6px;">
+        Continue to Form
+      </a>
     </form>
   </main>
 

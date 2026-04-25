@@ -11,7 +11,8 @@
 <body>
 
   <main class="about-page">
-    <section class="about-hero">
+    <!-- I used <main> instead of a <div> because it's a semantic tag and helps with the structure for our sanity even though visually nothing changes.-->
+    <section class="about-hero"> <!-- this-->
       <p class="eyebrow">About</p>
       <h1>Clarity shouldn’t depend on who you know.</h1>
       <p class="subtext">
@@ -59,6 +60,7 @@
       </div>
 
       <div class="region-graphic">
+        <!--Visual component for now in CSS, interactivity TBD-->
         <div class="california-card">
           <div class="map-label north">Northern California</div>
           <div class="map-label bay">Bay Area</div>
@@ -72,7 +74,7 @@
         </div>
       </div>
     </section>
-
+<!-- This section is not yet interactive but moreso meant to show that Via Health plans to expand across California but was launched at CNU. CSS was used to give a hover effect to the CNU pin. -   -->
     <section class="about-section">
       <h2>Meet the founding team</h2>
       <p class="team-line">Bahaar · Sarah · Jasraj · Samantha</p>
@@ -110,6 +112,7 @@
 
         <!-- BAHAAR -->
         <div class="mentor-preview-card">
+          <!-- Created this structure so that when more mentors are added-currently this is just the founding team- it will be easy to use the same code structure-->
           <div class="mentor-top">
             <div class="mentor-avatar">B</div>
             <div>

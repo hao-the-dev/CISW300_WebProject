@@ -1,19 +1,36 @@
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
-  <script src="script.js" defer></script>
 <div id="nav-placeholder"></div>
 <section class="explore-journey-section">
-  <div class="journey-header">
+  <!-- 
+    This section introduces the idea of exploring healthcare pathways.
+    The goal is low-pressure guidance while also "forcing" the user to make early decisions on the page which fits Via Health's decision-first logic. 
+  -->
+
+  <div class="journey-header"> <!-- This-->
     <p class="eyebrow">Explore pathways</p>
     <h2>Choose your own path.</h2>
+
     <p class="journey-subtext">
-      Start with what pulls you in. You do not need to know your entire future
-      right now—just what you want to explore next.
+      Start with what pulls you. You don't need to know your entire future—just the next step. Build a path that fits and grows with you.
+      <!--!The whole "journey" motif behind the design logic for this page is meant to evoke "Choose Your OWn Adventure" meets a decision tree. 
+      Ideally this would be more interactive but given our limited JavaScript capabilities at this stage in the class/knowledge banks, 
+      it is mostly CSS and the code is locked into a fixed result. -->
     </p>
   </div>
 
   <div class="journey-map-shell">
+    <!-- 
+      This wraps both the visual “path” graphic and the side explanation card.
+      Layout (side-by-side vs stacked) is handled in CSS.
+    -->
+
     <div class="journey-map-card">
+      <!-- 
+        Visual representation of a possible path (EMT → PA → etc.)
+        This is not functional logic—it’s a conceptual graphic.
+      -->
+
       <div class="journey-route">
         <div class="route-stop">EMT</div>
         <div class="route-line route-line-1"></div>
@@ -32,15 +49,22 @@
 
     <div class="journey-side-card">
       <p>
-        The first step can feel high-stakes. Explore paths first, then decide
-        what kind of guidance you actually need.
+        Explore paths first, then decide what kind of guidance you actually need.
       </p>
       <a href="#pathways-grid" class="btn-primary">Explore paths</a>
     </div>
   </div>
 
   <div id="pathways-grid" class="journey-cards-grid">
+    <!-- 
+      Grid of pathway categories.
+      Each card is structured the same way for consistency and easy styling-especially as the Via Health team expects to add more pathways later aside from these select careers.
+    -->
+
     <article class="journey-path-card">
+      <!-- 
+        Using <article> because each card is a self-contained concept.
+      -->
       <span class="path-tag">Hands-on</span>
       <h3>Patient Care</h3>
       <p>Direct care, fast clinical exposure, and patient-facing roles.</p>
@@ -66,33 +90,47 @@
   </div>
 
   <div class="journey-roadmap-block">
+    <!-- 
+      This section previews how a path might look over time.
+      It complements the journey map but focuses more on outcomes.
+    -->
+
     <p class="eyebrow">Roadmap preview</p>
     <h2>See where a path could take you.</h2>
+
     <p class="journey-subtext">
-      Pathways are not one straight line. Explore possibilities, compare options,
-      and figure out what actually fits before committing to the next step.
+      Compare paths, test tradeoffs, and see what fits before committing.
     </p>
 
     <div class="roadmap-preview-grid">
       <div class="roadmap-mini-card">
+        <!-- Simplified visual version of a path -->
         <div class="mini-stop">EMT</div>
         <div class="mini-stop">PA</div>
         <div class="mini-stop wide-stop">Paramedic</div>
         <div class="mini-stop wide-stop">Firefighter</div>
+
         <p class="mini-caption">apply now or gain experience</p>
       </div>
 
       <div class="roadmap-copy-card">
+        <!-- Supporting explanation -->
         <p>
-          The first step can feel high-stakes. Explore paths first, then decide
-          what kind of guidance you actually need.
+          See how different paths evolve over time before committing to one direction.
         </p>
+
+        <!-- Anchor link to decision tool -->
         <a href="#decision-lab" class="btn-primary">Build your path</a>
       </div>
     </div>
   </div>
 
   <div class="decision-start-grid">
+    <!-- 
+      Entry points for different user mindsets.
+      Helps guide users into the decision lab.
+    -->
+
     <article class="decision-start-card">
       <h3>I want hands-on experience fast</h3>
       <p>
@@ -110,15 +148,26 @@
     </article>
   </div>
 </section>
+
 <section id="decision-lab" class="decision-lab-section">
+  <!-- 
+    This is a prototype decision tool.
+    Important: the inputs exist anecdotally from founder convos, but the results are currently static and this would not appear on public version of the site-more of a demo for the founding team at the moment.
+  -->
+
   <p class="eyebrow">Decision Lab</p>
-  <h2>Build a path that actually fits you.</h2>
+  <h2>Build a path that fits you.</h2>
+
   <p class="section-subtext">
-    Answer a few questions, adjust your priorities, and see which directions make the most sense right now.
+    Adjust your priorities and see how different paths align with what matters to you.
   </p>
 
   <div class="decision-lab-grid">
     <div class="decision-input-card">
+      <!-- 
+        These buttons represent user choices.
+        They are styled as interactive, but as noted above, actual logic would be handled in JavaScript.
+      -->
       <h3>1. What matters most?</h3>
 
       <p>I want...</p>
@@ -127,14 +176,12 @@
         <button class="choice-pill">balance</button>
         <button class="choice-pill">long-term upside</button>
       </div>
-
       <p>I care most about...</p>
       <div class="choice-row">
         <button class="choice-pill active">patient care</button>
         <button class="choice-pill">research</button>
         <button class="choice-pill">stability</button>
       </div>
-
       <p>My tolerance for debt/training is...</p>
       <div class="choice-row">
         <button class="choice-pill active">low</button>
@@ -144,6 +191,11 @@
     </div>
 
     <div class="decision-slider-card">
+      <!-- 
+        Sliders allow users to adjust priorities.
+        Currently visual only—logic not yet implemented.
+      -->
+
       <h3>2. Adjust your tradeoffs</h3>
 
       <label>Shorter training</label>
@@ -158,6 +210,10 @@
   </div>
 
   <div class="decision-results-section">
+    <!-- 
+      These results are currently static placeholders.
+      In a full version, JavaScript would dynamically calculate these.
+    -->
     <div class="results-header">
       <div>
         <p class="eyebrow">Recommendation</p>
@@ -200,7 +256,7 @@
       <div class="result-info-card">
         <p class="eyebrow">What to do this week</p>
         <h4>1-week action generator</h4>
-        <ul>
+        <ul style="list-style-type: none;">
           <li>Compare PA and RN training timelines in California.</li>
           <li>Talk to one person in a patient-facing role.</li>
           <li>Write down what kind of day-to-day work actually appeals to you.</li>
@@ -208,4 +264,6 @@
       </div>
     </div>
   </div>
+</div>
 </section>
+
