@@ -1,3 +1,6 @@
+<!-- 1. Sarah & Hao / Sarah created the form on 4/19/2026.
+Hao styled it and created a database for it.-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,27 +70,32 @@
       <fieldset>
         <legend>What type of support are you seeking? (Select all that apply)</legend>
 
-        <label><input type="checkbox" id="career_guidance" name="support_type" value="Career Guidance"> Career Guidance</label>
-        <label><input type="checkbox" id="clinical_training" name="support_type" value="Clinical Training"> Clinical Training</label>
-        <label><input type="checkbox" id="academic_support" name="support_type" value="Academic Support"> Academic Support</label>
-        <label><input type="checkbox" id="not_sure" name="support_type" value="Not Sure"> Not Sure</label>
+        <input type="checkbox" class="choice-pill" id="career_guidance" name="support_type" value="Career Guidance"><label for="career_guidance"> Career Guidance</label>
+        <input type="checkbox" class="choice-pill" id="clinical_training" name="support_type" value="Clinical Training"><label for="clinical_training">Clinical Training</label>
+        <input type="checkbox" class="choice-pill" id="academic_support" name="support_type" value="Academic Support"><label for="academic_support"> Academic Support</label>
+        <input type="checkbox" class="choice-pill" id="not_sure" name="support_type" value="Not Sure"> <label for="not_sure">Not Sure</label>
       </fieldset>
 
       <fieldset>
         <legend>What best describes your request?</legend>
 
-        <label><input type="radio" id="apply" name="request_type" value="Apply to a Program"> Apply to a Program</label>
-        <label><input type="radio" id="inquiry" name="request_type" value="General Inquiry"> General Inquiry</label>
-        <label><input type="radio" id="otherrequest" name="request_type" value="Other"> Other</label>
+        <input type="radio" class="choice-pill" id="apply" name="request_type" value="Apply to a Program">
+        <label for="apply">Apply to a Program</label>
+
+        <input type="radio" class="choice-pill" id="inquiry" name="request_type" value="General Inquiry">
+        <label for="inquiry"> General Inquiry</label>
+
+        <input type="radio" class="choice-pill" id="otherrequest" name="request_type" value="Other">
+        <label for="otherrequest">Other</label>
       </fieldset>
 
       <fieldset>
-        <legend>Select areas you need help with:</legend>
+        <legend>Select areas you need help with (Select all that apply):</legend>
 
-        <label><input type="checkbox" id="applications" name="areas" value="Applications"> Applications (Med School, Programs)</label>
-        <label><input type="checkbox" id="skills" name="areas" value="Skills"> Technical Skills (Labs, Devices)</label>
-        <label><input type="checkbox" id="networking" name="areas" value="Networking"> Networking & Mentorship</label>
-        <label><input type="checkbox" id="research" name="areas" value="Research"> Research Guidance</label>
+        <input type="checkbox" class="choice-pill" id="applications" name="areas" value="Applications"><label for="applications"> Applications (Med School, Programs)</label>
+        <input type="checkbox" class="choice-pill" id="skills" name="areas" value="Skills"><label for="skills"> Technical Skills (Labs, Devices)</label>
+        <input type="checkbox" class="choice-pill" id="networking" name="areas" value="Networking"><label for="networking"> Networking & Mentorship</label>
+        <input type="checkbox" class="choice-pill" id="research" name="areas" value="Research"><label for="research"> Research Guidance</label>
       </fieldset>
 
       <label for="program">Which ViaHealth program or pathway are you most interested in?</label>
@@ -99,7 +107,7 @@
       </select>
 
       <label for="level">Select your current level:</label>
-      <select id="level" name="level">
+      <select id="level" name="level" class="custom-select">
         <option value="highschool">High School Student</option>
         <option value="undergrad">Undergraduate Student</option>
         <option value="postgrad">Postgraduate / Gap Year</option>
@@ -107,10 +115,9 @@
 
       <fieldset>
         <legend>How urgent is your request?</legend>
-
-        <label><input type="radio" id="low" name="urgency" value="Low"> Low (general guidance)</label>
-        <label><input type="radio" id="medium" name="urgency" value="Medium"> Moderate (within a few weeks)</label>
-        <label><input type="radio" id="high" name="urgency" value="High"> High (time-sensitive / upcoming deadline)</label>
+        <input type="radio" id="low" class="choice-pill" name="urgency" value="Low"><label for="low"> Low (general guidance)</label>
+        <input type="radio" id="medium" class="choice-pill" name="urgency" value="Medium"><label for="medium"> Moderate (within a few weeks)</label>
+        <input type="radio" id="high" class="choice-pill" name="urgency" value="High"><label for="high"> High (time-sensitive / upcoming deadline)</label>
       </fieldset>
 
       <label for="deadline">Do you have a specific deadline?</label>
@@ -132,3 +139,4 @@
   </main>
 </body>
 </html>
+<!-- 1. End-->

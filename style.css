@@ -1,8 +1,4 @@
-/* =========================
-   1. DESIGN TOKENS / VARIABLES
-   Reusable values for color, spacing, radius, and shadow.
-   This makes the site more consistent and easier to update.
-========================= */
+/* Root */
 :root {
    --bg: #f5f3ee;
    --surface: #ffffff;
@@ -45,10 +41,16 @@ body {
    line-height: 1.4;
 }
 
-/* =========================
-   3. GLOBAL LAYOUT
-   Shared page container spacing for major page wrappers.
-========================= */
+/* Global Layout */
+.title {
+   all: unset;
+   font-size: 5rem;
+   line-height: 1;
+   font-weight: 900;
+   display: inline-block;
+   width: fit-content;
+}
+
 main,
 .about-page,
 .program-page,
@@ -85,26 +87,20 @@ section h2 {
    font-weight: 700;
 }
 
-.subtext,
-.hero-subtext,
-.section-subtext {
-   color: var(--muted);
-   line-height: 1.5;
-}
-
 .subtext {
    font-size: 1.35rem;
    max-width: 720px;
    margin: 0 auto 36px;
+   color: var(--muted);
+   line-height: 1.5;
+   padding-top: 20px;
+   font-family: 'Georgia', serif;
+
+}
+.about-hero .subtext {
+   padding-top: 50px;
 }
 
-.hero-subtext,
-.section-subtext {
-   max-width: 900px;
-   margin: 0 auto;
-   font-size: clamp(1.2rem, 2vw, 1.6rem);
-   line-height: 1.45;
-}
 
 .text-link,
 .feature-link {
@@ -252,7 +248,7 @@ section h2 {
 }
 
 .hero-section {
-   padding: 70px 24px 40px;
+   padding: 0px 24px 40px;
 }
 
 .hero-content {
@@ -291,10 +287,12 @@ section h2 {
    justify-content: center;
    gap: 16px;
    flex-wrap: wrap;
+   padding-bottom: 125px;
+   padding-top: 160px;
 }
 
 .hero-actions {
-   margin-top: 34px;
+   margin-top: 75px;
 }
 
 .Home .btn {
@@ -416,7 +414,7 @@ section h2 {
 .final-cta-section {
    max-width: 1320px;
    margin: 0 auto;
-   padding: 90px 24px;
+   padding: 50px 24px;
 }
 
 .section-header {
@@ -532,13 +530,10 @@ section h2 {
 /* =========================
    9. ABOUT PAGE
 ========================= */
-.about-page {
-   padding-top: 60px;
-}
 
 .about-hero {
    text-align: center;
-   padding: 30px 0 70px;
+
 }
 
 .mission-two-col {
@@ -593,7 +588,6 @@ section h2 {
    font-size: 1.1rem;
    line-height: 1.7;
 }
-
 .mentor-preview-grid {
    display: grid;
    grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -796,6 +790,7 @@ section h2 {
    border: 2px solid var(--line);
    padding: 30px;
    border-radius: 15px;
+   line-height: 2;
 }
 
 
@@ -933,6 +928,27 @@ section h2 {
    justify-content: center;
 }
 
+.choice-pill {
+   display: none;
+   padding: 10px;
+
+}
+
+label {
+   display: inline-block;
+   padding: 10px 20px;
+   background-color: #f0f0f0;
+   border: 1px solid #ccc;
+   cursor: pointer;
+   transition: all 0.2s ease;
+}
+
+.choice-pill:checked+label {
+   background-color: #333;
+   color: white;
+   border-color: #333;
+}
+
 .choice-btn,
 .mode-btn {
    border: 1px solid #ddd6ca;
@@ -989,9 +1005,9 @@ section h2 {
 .explore-journey-section {
    max-width: 1320px;
    margin: 0 auto;
-   padding: 110px 24px 90px;
+   padding: 40px 24px 40px;
 }
-
+/*    padding: 110px 24px 90px;*/
 .journey-header,
 .journey-roadmap-block {
    text-align: center;
@@ -1006,13 +1022,6 @@ section h2 {
    font-weight: 900;
 }
 
-.journey-subtext {
-   max-width: 860px;
-   margin: 0 auto;
-   color: var(--muted);
-   font-size: 1.2rem;
-   line-height: 1.55;
-}
 
 .journey-map-shell,
 .roadmap-preview-grid,
@@ -1022,7 +1031,10 @@ section h2 {
    gap: 28px;
    margin-top: 54px;
 }
-
+.journey-map-shell {
+   padding-bottom: 40px;
+   padding-top: 20px;
+}
 .journey-map-card,
 .journey-side-card,
 .roadmap-mini-card,
@@ -1255,7 +1267,7 @@ section h2 {
 
 .resources-hero {
    text-align: center;
-   padding: 100px 0 40px;
+   padding: 0 0 42px;
 }
 
 .resources-hero .eyebrow {
@@ -1272,13 +1284,6 @@ section h2 {
    max-width: 980px;
 }
 
-.resources-hero .subtext {
-   font-size: 1.25rem;
-   line-height: 1.5;
-   color: #666;
-   max-width: 900px;
-   margin: 0 auto;
-}
 
 .resource-controls {
    max-width: 1100px;
@@ -1412,12 +1417,12 @@ section h2 {
    15. EVENTS PAGE
 ========================= */
 .events-page {
-   padding: 50px 24px 100px;
+   padding: 40px 24px 40px;
 }
 
 .events-hero {
    text-align: center;
-   padding: 30px 0 70px;
+   padding: 0 0 70px;
 }
 
 .featured-event,
@@ -1496,12 +1501,34 @@ section h2 {
    Clean form layout instead of page-level padding hacks.
 ========================= */
 .Mentorship {
-   padding: 0;
+   padding: 20px 24px 40px;
 }
-
+/* unfinished */
+.custom-select {
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none
+   border-radius: 0;
+   border: 2px solid #000;
+   padding: 10px 40px 10px 15px;
+   width: 250px;
+   height: 50px;
+   background-color: #fff;
+   font-family: inherit;
+   font-size: 1rem;
+   cursor: pointer;
+   background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="black" d="M7 10l5 5 5-5z"/></svg>');
+   background-repeat: no-repeat;
+   background-position: right 10px center;
+}
+.custom-select option:checked {
+   background-color: #000 !important;
+   color: #fff !important;
+}
+/* unfinished */
 .form-container {
    max-width: 700px;
-   margin: 80px auto;
+   margin: auto;
    padding: 0 20px 60px;
 }
 
@@ -1526,7 +1553,7 @@ form label,
 form legend {
    display: block;
    margin-top: 16px;
-   margin-bottom: 6px;
+
    font-weight: 700;
 }
 
@@ -1540,7 +1567,6 @@ form textarea {
    margin-bottom: 12px;
    box-sizing: border-box;
    border: 1px solid #d8d2c8;
-   border-radius: 12px;
    background: #fff;
 }
 
@@ -1615,10 +1641,7 @@ input[type="submit"] {
    cursor: pointer;
 }
 
-/* =========================
-   17. RESPONSIVE RULES
-   Collapse multi-column layouts on smaller screens.
-========================= */
+/* Responsive Rules */
 @media (max-width: 980px) {
 
    .journey-map-shell,

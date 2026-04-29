@@ -1,3 +1,4 @@
+// 1. Hao - 4/19/2026 
 window.onload = function() {
     const navPlaceholder = document.getElementById('nav-placeholder');
     if (navPlaceholder) {
@@ -11,8 +12,9 @@ window.onload = function() {
             .catch(err => console.error("Could not load navbar:", err));
     }
 };
-
-// Supabase client setup //
+// 1. End 
+// 2. Hao - 4/20/2026 to 4/21/2026 
+// Supabase client setup 
 const SUPABASE_URL = 'https://zrgbbcrbmlpbwziyfjhn.supabase.co';
 const SUPABASE_ANON_KEY = 'sb_publishable_ZvMlt5toiMdUOn6fEmRAWQ_KuWmgFnw';
 const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
@@ -67,6 +69,9 @@ async function mentorshipFormSubmit(event) {
         event.target.reset(); 
     }
 }
+// 2. End
+
+// 3. Sarah - 4/22/2026 to 4/25/2026 
 document.addEventListener("DOMContentLoaded", () => {
   const choiceRows = document.querySelectorAll(".choice-row");
   const normalModeBtn = document.getElementById("normalMode");
@@ -344,3 +349,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+// 3. End 

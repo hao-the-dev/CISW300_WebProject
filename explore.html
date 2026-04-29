@@ -9,9 +9,9 @@
 
   <div class="journey-header"> <!-- This-->
     <p class="eyebrow">Explore pathways</p>
-    <h2>Choose your own path.</h2>
+    <h1 class="title">Choose your own path.</h1>
 
-    <p class="journey-subtext">
+    <p class="subtext">
       Start with what pulls you. You don't need to know your entire future—just the next step. Build a path that fits and grows with you.
       <!--!The whole "journey" motif behind the design logic for this page is meant to evoke "Choose Your OWn Adventure" meets a decision tree. 
       Ideally this would be more interactive but given our limited JavaScript capabilities at this stage in the class/knowledge banks, 
@@ -172,9 +172,14 @@
 
       <p>I want...</p>
       <div class="choice-row">
-        <button class="choice-pill active">a fast start</button>
-        <button class="choice-pill">balance</button>
-        <button class="choice-pill">long-term upside</button>
+        <input type="radio" id="fastStart" name="choice-pill" class="choice-pill" checked>
+        <label for="fastStart">Fast Start</label>
+        
+        <input type="radio" id="balance" name="choice-pill" class="choice-pill">
+        <label for="balance">Balance</label>
+        
+        <input type="radio" id="long-termUpside" name="choice-pill" class="choice-pill">
+        <label for="long-termUpside">Long-term Upside</label>
       </div>
       <p>I care most about...</p>
       <div class="choice-row">
